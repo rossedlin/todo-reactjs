@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 /**
+ * App
+ */
+import App from './App';
+
+/**
  * Sentry
  */
 import * as Sentry from '@sentry/react';
@@ -13,11 +18,6 @@ Sentry.init({
   integrations:     [new BrowserTracing()],
   tracesSampleRate: 1.0,
 });
-
-/**
- * App
- */
-import App from './App';
 
 /**
  * Root

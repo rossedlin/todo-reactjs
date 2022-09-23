@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {FaPlus, FaTrashAlt, FaCheck} from 'react-icons/fa';
+import {FaPlus, FaCheck} from 'react-icons/fa';
 import {getFirestore, collection, getDocs} from 'firebase/firestore/lite';
 
 /**

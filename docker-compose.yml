@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  web:
+    image: rossedlin/nodejs:14
+    ports:
+      - "3000:3000"
+      - "9005:9005"
+    command: "yarn start"
+    volumes:
+      - ./:/home/node/app

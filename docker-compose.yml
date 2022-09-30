@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   web:
-    image: rossedlin/nodejs:14
+    image: rossedlin/nodejs:16
     ports:
       - "3000:3000"
       - "9005:9005"

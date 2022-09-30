@@ -107,7 +107,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
             <div className={'text-center mt-3'}>
               <h1>Todo ReactJS</h1>
             </div>

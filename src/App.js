@@ -174,6 +174,7 @@ function Form({handleAdd}) {
     event.preventDefault();
 
     handleAdd(name);
+    setName('');
   };
 
   return (

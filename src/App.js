@@ -107,14 +107,14 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-6 offset-3">
-            <div className={'text-center mt-5'}>
+          <div className="col-12">
+            <div className={'text-center mt-3'}>
               <h1>Todo ReactJS</h1>
             </div>
 
             <hr/>
 
-            <div className={'row mt-5'}>
+            <div className={'row mt-3'}>
                 {this.state.tasks && this.state.tasks.map(task => (
                   <Task key={task.id} id={task.id} name={task.name} onComplete={this.handleCompleteTask}/>
                 ))}
@@ -142,11 +142,11 @@ function Task({id, name, onComplete}) {
   return (
     <div className={'col-12'} key={id}>
       <div className={'row mt-1 mb-1'}>
-        <div className="col-10 text-end">
+        <div className="col-10">
           {name}
         </div>
 
-        <div className={'col-2'}>
+        <div className={'col-2 ms-auto'}>
           <button type="button" className={'btn btn-sm btn-primary'} onClick={() => onComplete(id)}>
             <FaCheck size={16}/>
           </button>
@@ -177,7 +177,7 @@ function Form({handleAdd}) {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={(e) => handleSubmit(e)}>
       <div className="row">
         <div className="col-8">
           <input className="form-control"
@@ -186,7 +186,7 @@ function Form({handleAdd}) {
                  placeholder="Task name..."
                  onChange={(event) => {setName(event.target.value)}}/>
         </div>
-        <div className="col-4">
+        <div className="col-3 ms-auto">
           <button type="submit"
                   className={'btn btn-primary'}
                   disabled={name === ''}><FaPlus size={12}/>&nbsp;Add</button>

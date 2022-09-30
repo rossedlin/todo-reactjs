@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 // App
 import App from './App';
-// import './App.css';
+import './App.css';
 
 // Sentry
 import * as Sentry from '@sentry/react';

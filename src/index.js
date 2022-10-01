@@ -1,33 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// App
-import App from './App';
-import './App.css';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Firebase
-import {initializeApp} from 'firebase/app';
+// Your web app's Firebase configuration
+const firebaseConfig = {};
 
-/**
- * Firebase Initialise
- */
-const firebaseApp = initializeApp({
-  apiKey:            'AIzaSyDjbvUgu2NAiwOecBZBCg94Owms5Ih-7y0',
-  authDomain:        'todo-reactjs-251dd.firebaseapp.com',
-  projectId:         'todo-reactjs-251dd',
-  storageBucket:     'todo-reactjs-251dd.appspot.com',
-  messagingSenderId: '527798534811',
-  appId:             '1:527798534811:web:f00ea28a23c8a2d5223c3e',
-});
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-/**
- * ReactJS Initialise
- */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App firebaseApp={firebaseApp}/>
+    <App firebaseApp={app}/>
   </React.StrictMode>,
 );
 

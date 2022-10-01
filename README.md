@@ -4,17 +4,26 @@
 
 ## Requirements
 
-- todo
+- node v18.3.0
+- npm v8.19.1
+- yarn v1.22.17
+- firebase v11.8.1
 
 ## Setup
 
-- `todo`
+- `yarn create react-app todo-reactjs`
+- `yarn start`
+- `yarn add firebase react-icons`
+- Navigate `https://localhost:3000/` and you'll see the spinning ReactJS Logo.
 
 ## Code
 
-- `todo`
+- `public/index.html`
+- `src/index.js`
+- `src/App.js`
+- `src/App.css`
 
-## Env
+## Firebase
 
 - `todo`
 

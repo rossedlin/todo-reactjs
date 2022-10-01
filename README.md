@@ -12,8 +12,8 @@
 ## Setup
 
 - `yarn create react-app todo-reactjs`
-- `yarn start`
 - `yarn add firebase react-icons`
+- `yarn start`
 - Navigate `https://localhost:3000/` and you'll see the spinning ReactJS Logo.
 
 ## Code

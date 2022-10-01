@@ -115,9 +115,9 @@ export default class App extends Component {
             <hr/>
 
             <div className={'row mt-3'}>
-                {this.state.tasks && this.state.tasks.map(task => (
-                  <Task key={task.id} id={task.id} name={task.name} onComplete={this.handleCompleteTask}/>
-                ))}
+              {this.state.tasks && this.state.tasks.map(task => (
+                <Task key={task.id} id={task.id} name={task.name} onComplete={this.handleCompleteTask}/>
+              ))}
             </div>
 
             <div className={'mt-5'}>

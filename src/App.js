@@ -44,13 +44,11 @@ export default class App extends Component {
 
     const db   = getFirestore(this.props.firebaseApp);
 
-    // Add a new document in collection "cities"
     await addDoc(collection(db, "tasks"), {
       name: name,
       completed: false,
     });
 
-    //Refresh current list
     this.getData().then((res) => {
       this.setState({tasks: res});
     });
@@ -64,12 +62,10 @@ export default class App extends Component {
   async handleCompleteTask(id) {
     const db   = getFirestore(this.props.firebaseApp);
 
-    // Add a new document in collection "cities"
     await setDoc(doc(db, "tasks", id), {
       completed: true,
     }, {merge: true});
 
-    //Refresh current list
     this.getData().then((res) => {
       this.setState({tasks: res});
     });
@@ -84,7 +80,6 @@ export default class App extends Component {
     let t = [];
 
     const db   = getFirestore(this.props.firebaseApp);
-    // const col  = collection(db, 'tasks');
     const q = query(collection(db, "tasks"), where("completed", "==", false));
     const snap = await getDocs(q);
 
@@ -116,7 +111,10 @@ export default class App extends Component {
 
             <div className={'row mt-3'}>
               {this.state.tasks && this.state.tasks.map(task => (
-                <Task key={task.id} id={task.id} name={task.name} onComplete={this.handleCompleteTask}/>
+                <Task key={task.id}
+                      id={task.id}
+                      name={task.name}
+                      onComplete={this.handleCompleteTask}/>
               ))}
             </div>
 
@@ -147,7 +145,9 @@ function Task({id, name, onComplete}) {
         </div>
 
         <div className={'col-2 ms-auto'}>
-          <button type="button" className={'btn btn-sm btn-primary'} onClick={() => onComplete(id)}>
+          <button type="button"
+                  className={'btn btn-sm btn-primary'}
+                  onClick={() => onComplete(id)}>
             <FaCheck size={16}/>
           </button>
         </div>
@@ -166,10 +166,6 @@ function Form({handleAdd}) {
 
   const [name, setName] = useState('');
 
-  /**
-   *
-   * @type {{}}
-   */
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -190,7 +186,9 @@ function Form({handleAdd}) {
         <div className="col-3 ms-auto">
           <button type="submit"
                   className={'btn btn-primary'}
-                  disabled={name === ''}><FaPlus size={12}/>&nbsp;Add</button>
+                  disabled={name === ''}>
+            <FaPlus size={12}/>&nbsp;Add
+          </button>
         </div>
       </div>
     </form>

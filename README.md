@@ -1,5 +1,9 @@
 # Todo ReactJS
 
+I built a fully working Todo List, where you can add and complete items, using ReactJS and Google Firestore for our database.
+
+Let's go.
+
 ---
 
 ## Requirements

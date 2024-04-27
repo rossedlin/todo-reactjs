@@ -1,6 +1,10 @@
 name: Dependabot
 
 on:
+  workflow_run:
+    workflows: ["$ { { github.workflow } } "]
+    types:
+      - completed
   pull_request:
 
 permissions:
